@@ -210,6 +210,23 @@ Finally, the ``put`` sub-command puts a file from your computer onto the
 connected device (it's named after the ``put`` command that's part of FTP that
 serves the same function).
 
+Notes for Windows users.
+If you have not installed Python yet try this:
+https://www.howtogeek.com/197947/how-to-install-python-on-windows/
+If you have Python installed use the CMD console (type CMD into Windows Search 
+aka Cortana) to install microfs.
+You then use ufs from the CMD console.
+> ufs ls
+or whatever.
+The ouput of print appears in the REPL window (Keyboard icon on Mu) but 
+if you leave the REPL window open you will get a 'could not open port' PermissionError
+because you are trying to access the usb port while it is still in use. So close REPL
+before trying ufs.
+Oh and if you run CMD as Administrator change the directory (I created a folder on C:
+called uBit) with
+> cd C:\uBit 
+Otherwise you will be writing files to your Windows/System32 folder (not a good idea!).
+
 Mainly main.py
 ++++++++++++++
 
